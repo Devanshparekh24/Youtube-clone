@@ -1,12 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Video({ video }) {
   console.log(video);
 
   return (
-    <div className=" ">
-      Video
-    </div>
+    <Link to={`/video/id:${video?.videoId}`}>
+      <div>
+        <div>
+          <img src={video?.thumbnails[0]?.url} alt="" />
+        </div>
+      </div>
+    </Link>
   );
 }
 

@@ -9,10 +9,10 @@ function Home() {
 
   return (
     <>
-      <div className="">
+      <div className="flex ">
         <Sidebar />
       </div>
-      <div className="flex gap-5">
+      <div className="flex-1 ">
         {data.length > 0 &&
           data.map((item) => <Video key={item.id} video={item?.videoId} />)}
       </div>
